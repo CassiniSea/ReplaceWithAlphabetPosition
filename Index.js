@@ -1,4 +1,12 @@
 function alphabetPosition(text) {
+	return text
+		.toUpperCase()
+		.match(/[a-z]/gi)
+		.map((char) => char.charCodeAt() - 64)
+		.join(' ')
+}
+
+function alphabetPosition2(text) {
 	let result = '';
 	text  .toLowerCase()
 		.split('')
